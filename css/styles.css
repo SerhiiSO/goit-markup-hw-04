@@ -38,7 +38,7 @@ body {
 }
 .container {
   width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -109,6 +109,7 @@ body {
   margin-left: 50px;
 }
 .mail-tel {
+  display: flex;
   text-decoration: none;
   color: #757575;
   font-weight: 500;
@@ -124,6 +125,11 @@ body {
 .mail-tel:focus,
 .mail-tel:hover {
   color: var(--link-hover-focus);
+}
+
+.mail-tel:hover .mail-tel-pic,
+.mail-tel:focus .mail-tel-pic {
+  fill: var(--link-hover-focus);
 }
 
 /*----------HEAD----------*/
@@ -359,8 +365,10 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
+  align-items: baseline;
   max-width: 1600px;
 }
+
 .footer-name {
   display: none;
 }
