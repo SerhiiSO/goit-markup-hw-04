@@ -10,8 +10,13 @@
   --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   --btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  --social-hover-focus-fill: #ffffff;
+  --portfolio-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --hover-focus-color: #ffffff;
+  --hover-focus-background: #2196f3;
   --social-color: #afb1b8;
+  --sort-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 h1,
 h2,
@@ -115,6 +120,7 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  align-items: center;
 }
 .mail-tel-pic {
   fill: var(--primary-font-color);
@@ -172,7 +178,7 @@ body {
   line-height: 1.88;
   cursor: pointer;
   margin-top: 30px;
-  box-shadow: var(--btn-shadow);
+  btn-shadow: var(--btn-shadow);
   border-radius: 4px;
   border-color: transparent;
   padding: 10px 32px;
@@ -320,7 +326,7 @@ body {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--link-hover-focus);
-  fill: var(--social-hover-focus-fill);
+  fill: var(--hover-focus-color);
 }
 .clients-block {
 }
@@ -364,13 +370,16 @@ body {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer-content {
   display: flex;
   align-items: baseline;
-  max-width: 1600px;
 }
-
 .footer-name {
   display: none;
+}
+.address {
+  margin-right: 70px;
 }
 .footer-logo {
   font-family: var(--secondary-font);
@@ -411,6 +420,7 @@ body {
   color: var(--link-hover-focus);
 }
 .footer-title-contacts {
+  font-size: 14px;
   color: #ffffff;
 }
 .footer-social {
@@ -437,12 +447,15 @@ body {
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-  background-color: var(--primary-accent-color);
+  background-color: var(--link-hover-focus);
+  fill: var(--hover-focus-color);
 }
 .footer-social-pic {
   width: 20px;
   height: 20px;
 }
+
+/* -----------------PORTFOLIO----------------- */
 .sort {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -469,10 +482,22 @@ body {
   padding: 6px 22px;
   border-radius: 4px;
   border-color: transparent;
+  text-align: center;
+}
+
+.sort-button:hover,
+.sort-button:focus {
+  color: var(--hover-focus-color);
+  background-color: var(--hover-focus-background);
+  box-shadow: var(--sort-button-shadow);
 }
 .example {
   margin: 15px;
   flex-basis: calc(100% / 3 - 30px);
+}
+.example:hover,
+.example:focus {
+  box-shadow: var(--portfolio-box-shadow);
 }
 .example-list {
   margin: -15px;
