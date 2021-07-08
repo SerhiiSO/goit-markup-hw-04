@@ -205,13 +205,14 @@ body {
 }
 
 .advantage-logo {
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .advantage-logo-pic {
@@ -228,7 +229,6 @@ body {
 }
 .adv-list-part {
   width: 270px;
-  margin-top: 30px;
 }
 .adv-list-head {
   font-weight: 700;
@@ -236,13 +236,13 @@ body {
   color: #212121;
   font-size: 14px;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .adv-list-inform {
   line-height: 1.7;
   color: var(--primary-font-color);
   letter-spacing: 0.03em;
-  margin-top: 10px;
 }
 .activity {
   padding-bottom: 94px;
@@ -294,6 +294,8 @@ body {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .about-list-position {
   color: var(--primary-font-color);
@@ -303,8 +305,8 @@ body {
 }
 .social {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
+  /* padding-left: 32px;
+  padding-right: 32px; */
   justify-content: space-between;
   margin-top: 16px;
 }
@@ -334,6 +336,11 @@ body {
 
 .clients-title {
   text-align: center;
+  margin-bottom: 50px;
+  font-family: var(--primary-font);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
 }
 
 .clients-list {
@@ -351,7 +358,7 @@ body {
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
-  margin-top: 50px;
+
   border-radius: 4px;
   fill: var(--social-color);
 }
@@ -496,8 +503,12 @@ body {
   margin: 15px;
   flex-basis: calc(100% / 3 - 30px);
 }
-.example:hover,
-.example:focus {
+.example-link {
+  display: block;
+}
+
+.example-link:hover,
+.example-link:focus {
   box-shadow: var(--portfolio-box-shadow);
 }
 .example-list {
